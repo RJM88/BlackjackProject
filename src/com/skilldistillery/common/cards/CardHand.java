@@ -13,7 +13,7 @@ public abstract class CardHand {
 
 	public CardHand() {
 	}
-	
+
 	public List<Card> getCards() {
 		return cards;
 	}
@@ -26,11 +26,12 @@ public abstract class CardHand {
 		cards = new ArrayList<Card>();
 
 	}
+
 	public abstract int getHandValue();
 
 	@Override
 	public String toString() {
-		return "Your cards: " + cards ;
+		return "Cards: " + cards;
 	}
 
 	@Override

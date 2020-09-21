@@ -7,7 +7,6 @@ public class BlackJackHand extends CardHand {
 
 	public BlackJackHand() {
 		super();
-
 	}
 
 	@Override
@@ -22,7 +21,6 @@ public class BlackJackHand extends CardHand {
 	public boolean isBust() {
 		if (getHandValue() > 21) {
 			return true;
-
 		}
 		return false;
 

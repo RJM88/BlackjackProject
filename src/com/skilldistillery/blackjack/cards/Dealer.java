@@ -24,13 +24,13 @@ public class Dealer extends Player {
 
 	public String checkForWinner(BlackJackHand player, BlackJackHand dealer) {
 		if (player.getHandValue() > dealer.getHandValue()) {
-			String playerWins = ("Player Wins!");
+			String playerWins = ("\nPlayer Wins!");
 			return playerWins;
 		} else if (player.getHandValue() < dealer.getHandValue()) {
-			String dealerWins = ("Dealer Wins!");
+			String dealerWins = ("\nDealer Wins!");
 			return dealerWins;
 		} else {
-			String itsAPush = ("It's a push!");
+			String itsAPush = ("\nIt's a push!");
 			return itsAPush;
 		}
 	}
@@ -42,6 +42,5 @@ public class Dealer extends Player {
 			return false;
 		}
 	}
-
 
 }

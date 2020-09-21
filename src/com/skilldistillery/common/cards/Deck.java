@@ -15,6 +15,9 @@ public class Deck {
 			}
 		}
 	}
+	public void newDeck() {
+		Deck deck = new Deck();
+	}
 
 	public int checkDeckSize() {
 		return cards.size();
