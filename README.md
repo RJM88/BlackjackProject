@@ -19,10 +19,14 @@ This is a game of Blackjack where the User will see both their cards and one of 
 * Using collection types to organize and manage data.
 
 ## How to Run
-1. Program will start by welcoming the user to Blackjack.
-2. The Dealer will deal both the Player and Dealer two cards. 
-	* Only one of the Dealers cards will be displayed.
-3. Next the User will have the choice to hit or stay IF the Player and Dealer did not get Blackjack.
-4.Once the Player chooses to stay it will be the Dealers turn, unless the Player busts then they loose.
-5.The Dealer will take there turn, always hitting under 17 but never hitting on or above 17.
-6.once both turns are done, the winner will be displayed. 
+* Program will start by welcoming the user to Blackjack.
+
+* The Dealer will deal both the Player and Dealer two cards. Only one of the Dealers cards will be displayed.
+
+* Next the User will have the choice to hit or stay IF the Player and Dealer did not get Blackjack.
+
+* Once the Player chooses to stay it will be the Dealers turn, unless the Player busts then they loose.
+
+* The Dealer will take there turn, always hitting under 17 but never hitting on or above 17.
+
+* Once both turns are done, the winner will be displayed. 
