@@ -41,7 +41,6 @@ public class BlackJackTable {
 			case "yes":
 			case "y":
 				int checkThis = bJTable.bjDealer.bjDeck.checkDeckSize();
-				System.err.println(checkThis);
 				if (checkThis <= 10) {
 					System.out.println();
 					System.out.println("New deck!");
