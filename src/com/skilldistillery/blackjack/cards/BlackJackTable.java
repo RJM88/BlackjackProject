@@ -8,6 +8,7 @@ public class BlackJackTable {
 	Dealer bjDealer = new Dealer();
 	Player bjPlayer = new Player();
 	Scanner kb = new Scanner(System.in);
+	boolean playAgain = true;
 
 	public BlackJackTable() {
 		super();
@@ -16,22 +17,51 @@ public class BlackJackTable {
 	// Will display a welcome message to player.
 	public void startingDisplay() {
 		System.out.println(" _________________________________________________________");
-		System.out.println("											               ");
+		System.out.println("											              ");
 		System.out.println("|   Welcome to the BlackJack Table, please take a seat.   |");
-		System.out.println("											               ");
+		System.out.println("											              ");
 		System.out.println("|           Dealer is now dealing the cards.              |");
-		System.out.println("											               ");
+		System.out.println("											              ");
 		System.out.println("|_________________________________________________________|");
 		System.out.println();
 	}
 
 	// This method will call the stating display, call on the dealing method, and
 	// play the first round.
+
 	public void gamePlay() {
+
 		BlackJackTable bJTable = new BlackJackTable();
 		bJTable.startingDisplay();
 		bJTable.dealerDeals();
 		bJTable.roundOfPlay();
+		while (playAgain) {
+			System.out.print("Do you want to play again? Y/N: ");
+			switch (kb.next().toLowerCase()) {
+			case "yes":
+			case "y":
+				int checkThis = bJTable.bjDealer.bjDeck.checkDeckSize();
+				System.err.println(checkThis);
+				if (checkThis <= 10) {
+					System.out.println();
+					System.out.println("New deck!");
+					System.out.println();
+					bJTable.bjDealer.bjDeck = new BlackJackTable().bjDealer.bjDeck;
+				}
+				bJTable.bjPlayer.bjH.clearHand();
+				bJTable.bjDealer.bjH.clearHand();
+				bJTable.dealerDeals();
+				bJTable.roundOfPlay();
+				break;
+			case "n":
+			case "no":
+				playAgain = false;
+				System.out.println("Thank you for playing.");
+				break;
+			default:
+				System.out.println("Not an option.");
+			}
+		}
 	}
 
 	// This method has the dealer shuffle the deck then deal the player and dealer
